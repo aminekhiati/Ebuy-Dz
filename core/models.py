@@ -15,6 +15,7 @@ class Product(models.Model):
     price = models.FloatField()
     d_price = models.FloatField(blank=True, null=True)
     category = models.CharField(choices=Category,default='shirt', max_length=50)
+    slug = models.SlugField()
 
     def __str__(self):
         return self.name
