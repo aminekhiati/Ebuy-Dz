@@ -297,7 +297,7 @@
         <div class="row wow fadeIn">
 
           
-          {% for a in object_list %}
+          {% for p in object_list %}
             
           
             
@@ -320,18 +320,17 @@
               <div class="card-body text-center">
                 <!--Category & Title-->
                 <a href="" class="grey-text">
-                  <h5>Shirt</h5>
+                  <h5>{{p.get_category_display}}</h5>
                 </a>
                 <h5>
                   <strong>
-                    <a href="" class="dark-grey-text">Denim shirt
-                      <span class="badge badge-pill danger-color">NEW</span>
+                    <a href="" class="dark-grey-text">{{p.name}}
                     </a>
                   </strong>
                 </h5>
 
                 <h4 class="font-weight-bold blue-text">
-                  <strong>120$</strong>
+                  <strong>{{p.price}}</strong>
                 </h4>
 
               </div>
