@@ -3,9 +3,17 @@ from django.conf import settings
 
 # Create your models here.
 
+Category = (
+    ('shirt','Shirt'),
+    ('pants','Pants'),
+    ('jacket','Jacket')
+)
+
+
 class Product(models.Model):
     name = models.CharField(max_length=50)
     price = models.FloatField()
+    category = models.CharField(choices=Category,default='shirt', max_length=50)
 
     def __str__(self):
         return self.name
