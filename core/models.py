@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.shortcuts import reverse
 
 # Create your models here.
 
@@ -16,10 +17,14 @@ class Product(models.Model):
     d_price = models.FloatField(blank=True, null=True)
     category = models.CharField(choices=Category,default='shirt', max_length=50)
     slug = models.SlugField()
-    
+
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse("product", kwargs={"slug": self.slug})
+    
 
 
 class ProductToCart(models.Model):

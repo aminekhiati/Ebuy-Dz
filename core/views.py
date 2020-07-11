@@ -22,11 +22,10 @@ class product(DetailView):
 
 
 
+
 def checkout(request):
     return render(request,'core/checkout.html')
 
 
 
-def products(request):
-    return render(request,'core/product.html')
 

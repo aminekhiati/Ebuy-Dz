@@ -76,9 +76,7 @@
           <li class="nav-item">
             <a class="nav-link waves-effect" href="{% url 'checkout' %}" >Checkout</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="{% url 'products' %}" >Products</a>
-          </li>
+          
         </ul>
 
         <!-- Right -->
@@ -324,7 +322,7 @@
                 </a>
                 <h5>
                   <strong>
-                    <a href="" class="dark-grey-text">{{p.name}}
+                    <a href="{{p.get_absolute_url}}" class="dark-grey-text">{{p.name}}
                     </a>
                   </strong>
                 </h5>
