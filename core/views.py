@@ -8,22 +8,25 @@ from .models import *
 
 class home(ListView):
     model = Product
-    template_name = 'core/home-page.html'
+    template_name = 'core/home.html'
+
+
+class product(DetailView):
+    model = Product
+    template_name = 'core/product.html'
 
 
 
 
 
-# def home (request):
-#     return render(request,'core/home-page.html')
 
 
 
 def checkout(request):
-    return render(request,'core/checkout-page.html')
+    return render(request,'core/checkout.html')
 
 
 
 def products(request):
-    return render(request,'core/product-page.html')
+    return render(request,'core/product.html')
 
