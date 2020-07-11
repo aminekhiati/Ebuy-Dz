@@ -100,10 +100,21 @@
             </div>
 
             <p class="lead">
+
+              
+              {% if object.d_price %}
+
               <span class="mr-1">
                 <del>{{object.price}}</del>
               </span>
               <span>{{object.d_price}}</span>
+                
+              {% else %}
+
+              <span>{{object.price}}</span>
+
+              {% endif %}
+                
             </p>
 
             <p class="lead font-weight-bold">Description</p>

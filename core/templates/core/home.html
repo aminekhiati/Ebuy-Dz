@@ -328,7 +328,15 @@
                 </h5>
 
                 <h4 class="font-weight-bold blue-text">
-                  <strong>{{p.price}}</strong>
+                  <strong>
+                    
+                    {% if p.d_price %}
+                      {{p.d_price}}
+                    {% else %}
+                      {{p.price}}  
+                    {% endif %}
+                  </strong>
+                      
                 </h4>
 
               </div>
