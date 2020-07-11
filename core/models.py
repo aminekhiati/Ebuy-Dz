@@ -13,6 +13,7 @@ Category = (
 class Product(models.Model):
     name = models.CharField(max_length=50)
     price = models.FloatField()
+    d_price = models.FloatField(blank=True, null=True)
     category = models.CharField(choices=Category,default='shirt', max_length=50)
 
     def __str__(self):
